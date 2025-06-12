@@ -49,7 +49,7 @@ This repo outlines the process of handling GDELT data using Databricks and PySpa
 ### 2. Set Up Databricks
 1. **Create a Databricks Workspace**:
    - Log in to your Azure portal.
-   - Create a new Databricks workspace if you don’t already have one. Follow the [Azure Databricks Quickstart Guide](https://learn.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace).
+   - Create a new Databricks workspace if you don’t already have one. Follow the [Azure Databricks Quickstart Guide](https://docs.azure.cn/en-us/databricks/getting-started).
 
 2. **Create a Cluster**:
    - In the Databricks workspace, navigate to the **Clusters** section.
@@ -70,7 +70,7 @@ This repo outlines the process of handling GDELT data using Databricks and PySpa
 1. **Import Python Scripts as Notebooks**:
    - In the Databricks workspace, navigate to the **Workspace** section.
    - Click **Import** and upload the Python scripts (`updated_event.py`, `updated_mention.py`, `updated_gkg.py`).
-   - Databricks will convert these scripts into notebooks. Refer to [Importing Notebooks](https://learn.microsoft.com/en-us/azure/databricks/workspace/notebooks/).
+   - Databricks will convert these scripts into notebooks. Refer to [Importing Notebooks](https://docs.databricks.com/aws/en/notebooks/share-code).
 
 2. **Attach Notebooks to the Cluster**:
    - Open each notebook.
@@ -106,17 +106,17 @@ This repo outlines the process of handling GDELT data using Databricks and PySpa
 - [Azure Databricks Documentation](https://learn.microsoft.com/en-us/azure/databricks/)
 - [Databricks File System (DBFS)](https://learn.microsoft.com/en-us/azure/databricks/dbfs/)
 - [Databricks Cluster Configuration Guide](https://learn.microsoft.com/en-us/azure/databricks/clusters/)
-- [Importing Notebooks in Databricks](https://learn.microsoft.com/en-us/azure/databricks/workspace/notebooks/)
+- [Importing Notebooks in Databricks](https://docs.databricks.com/aws/en/notebooks/share-code)
 - [Managing Libraries in Databricks](https://learn.microsoft.com/en-us/azure/databricks/libraries/)
 
 ## Citation
 
 If you use this repository or build on our work, please cite the following paper:
 
-Yuqi Zheng, Brian Lucey.  
-What REALLY drives clean energy stocks - Fear or Fundamentals?
-Energy Economics, Volume 148, 2025, 108558.  
-[https://doi.org/10.1016/j.eneco.2025.108558](https://doi.org/10.1016/j.eneco.2025.108558)
+> Yuqi Zheng, Brian Lucey.  
+> *What REALLY drives clean energy stocks - Fear or Fundamentals?*  
+> Energy Economics, Volume 148, 2025, 108558.  
+> [https://doi.org/10.1016/j.eneco.2025.108558]
 
 **BibTeX:**
 ```bibtex
@@ -131,3 +131,5 @@ Energy Economics, Volume 148, 2025, 108558.
   doi = {10.1016/j.eneco.2025.108558},
   url = {https://www.sciencedirect.com/science/article/pii/S0140988325003822}
 }
+
+[def]: https://doi.org/10.1016/j.eneco.2025.108558
