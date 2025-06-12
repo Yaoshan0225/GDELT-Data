@@ -148,7 +148,7 @@ df = spark.read.csv("dbfs:/mnt/results/yuqi_test/mention/gdeltmen_2_cutfile/", h
 
 # COMMAND ----------
 
-#筛选ID,时间和置信区间
+# Select ID, time, and confidence interval
 from pyspark.sql import functions as F
 
 # Load the CSV file
@@ -180,16 +180,16 @@ df = spark.read.csv("dbfs:/mnt/results/yuqi_test/mention/gdeltmen_3_filtered/", 
 
 from pyspark.sql import functions as F
 
-# 加载 CSV 文件
+# Load CSV file
 df = spark.read.csv("dbfs:/mnt/results/yuqi_test/mention/gdeltmen_3_filtered/", header=True, inferSchema=True)
 
-# 提取 mentiontimedate 的前八位 (yymmdd)
+# Extract the first 8 characters (yymmdd) from mentiontimedate
 df = df.withColumn("yymmdd", F.col("mentiontimedate").substr(1, 8))
 
-# 计算相同 yymmdd 的平均 confidence
+# Calculate the average confidence for each yymmdd
 result = df.groupBy("yymmdd").agg(F.avg("confidence").alias("average_confidence"))
 
-# 显示结果
+# Display the results
 result.show()
 
 result.write.option("header", "true").csv("dbfs:/mnt/results/yuqi_test/mention/gdeltmen_4_avgconfidence/", mode="overwrite")
