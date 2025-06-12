@@ -1,5 +1,8 @@
 # Summary
-This commit adds the scripts for processing GDELT data using Databricks and PySpark. These scripts handle event, mention, and GKG data, performing tasks such as filtering, aggregation, and saving final results to Azure Blob Storage.
+This summary outlines the process of handling GDELT data using Databricks and PySpark. The provided scripts are designed to process Event, Mention, and Global Knowledge Graph (GKG) datasets. Key operations include data filtering, aggregation, and exporting the final results to Azure Blob Storage for further analysis.
+
+This data processing workflow supports the analysis presented in the following article:
+- [What REALLY drives clean energy stocks - Fear or Fundamentals? Authors: Yuqi Zheng, Brian Lucey](https://www.sciencedirect.com/science/article/pii/S0140988325003822)
 
 ## Files Added
 1. **`updated_event.py`**
@@ -108,3 +111,4 @@ This commit adds the scripts for processing GDELT data using Databricks and PySp
 - [Databricks Cluster Configuration Guide](https://learn.microsoft.com/en-us/azure/databricks/clusters/)
 - [Importing Notebooks in Databricks](https://learn.microsoft.com/en-us/azure/databricks/workspace/notebooks/)
 - [Managing Libraries in Databricks](https://learn.microsoft.com/en-us/azure/databricks/libraries/)
+
