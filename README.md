@@ -1,6 +1,14 @@
 # README
 This repo outlines the process of handling GDELT data using Databricks and PySpark. The provided scripts are designed to process Event, Mention, and Global Knowledge Graph (GKG) datasets. Key operations include data filtering, aggregation, and exporting the final results to Azure Blob Storage for further analysis.
 
+## Databricks Free Edition for Academia
+
+Databricks is progressively collaborating with universities worldwide to provide access to the **Free Edition**.  
+
+> ⚠️ Users are limited to smaller compute and warehouse sizes.
+
+🔗 [Learn more about Free Edition](https://www.databricks.com/learn/free-edition)
+
 ## Files Added
 1. **`updated_event.py`**
    - Processes GDELT event data.
