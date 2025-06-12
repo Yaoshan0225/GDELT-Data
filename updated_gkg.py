@@ -75,7 +75,7 @@ df = spark.read.csv("dbfs:/mnt/results/yuqi_test/gkg/gdeltgkg_2_cutfile/", heade
 
 # COMMAND ----------
 
-#筛选主题和语气
+# Filter by topic and tone
 from pyspark.sql import functions as F
 
 # Load the CSV file
@@ -187,7 +187,7 @@ df = spark.read.csv("dbfs:/mnt/results/yuqi_test/gkg/gdeltgkg_4_countreportsanda
 
 # COMMAND ----------
 
-#统计该天报道的总个数
+# Count the total number of reports for each day
 from pyspark.sql import functions as F
 
 def count_reports_by_day(input_file_path, output_file_path):
