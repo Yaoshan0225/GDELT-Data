@@ -1,5 +1,5 @@
-# Summary
-This summary outlines the process of handling GDELT data using Databricks and PySpark. The provided scripts are designed to process Event, Mention, and Global Knowledge Graph (GKG) datasets. Key operations include data filtering, aggregation, and exporting the final results to Azure Blob Storage for further analysis.
+# README
+This repo outlines the process of handling GDELT data using Databricks and PySpark. The provided scripts are designed to process Event, Mention, and Global Knowledge Graph (GKG) datasets. Key operations include data filtering, aggregation, and exporting the final results to Azure Blob Storage for further analysis.
 
 This data processing workflow supports the analysis presented in the following article:
 - [What REALLY drives clean energy stocks - Fear or Fundamentals? Authors: Yuqi Zheng, Brian Lucey](https://www.sciencedirect.com/science/article/pii/S0140988325003822)
