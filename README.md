@@ -1,6 +1,4 @@
-# Commit: Add GDELT Data Processing Scripts
-
-## Summary
+# Summary
 This commit adds the scripts for processing GDELT data using Databricks and PySpark. These scripts handle event, mention, and GKG data, performing tasks such as filtering, aggregation, and saving final results to Azure Blob Storage.
 
 ## Files Added
