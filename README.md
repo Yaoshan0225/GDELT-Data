@@ -120,7 +120,7 @@ Energy Economics, Volume 148, 2025, 108558.
 
 **BibTeX:**
 ```bibtex
-@article{zheng2025fear,
+@article{zheng_and_lucey_2025,
   title = {What REALLY drives clean energy stocks - Fear or Fundamentals?},
   author = {Zheng, Yuqi and Lucey, Brian},
   journal = {Energy Economics},
