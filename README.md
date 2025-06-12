@@ -1,9 +1,6 @@
 # README
 This repo outlines the process of handling GDELT data using Databricks and PySpark. The provided scripts are designed to process Event, Mention, and Global Knowledge Graph (GKG) datasets. Key operations include data filtering, aggregation, and exporting the final results to Azure Blob Storage for further analysis.
 
-This data processing workflow supports the analysis presented in the following paper:
-- [What REALLY drives clean energy stocks - Fear or Fundamentals? Authors: Yuqi Zheng, Brian Lucey](https://www.sciencedirect.com/science/article/pii/S0140988325003822)
-
 ## Files Added
 1. **`updated_event.py`**
    - Processes GDELT event data.
@@ -112,3 +109,25 @@ This data processing workflow supports the analysis presented in the following p
 - [Importing Notebooks in Databricks](https://learn.microsoft.com/en-us/azure/databricks/workspace/notebooks/)
 - [Managing Libraries in Databricks](https://learn.microsoft.com/en-us/azure/databricks/libraries/)
 
+## Citation
+
+If you use this repository or build on our work, please cite the following paper:
+
+Yuqi Zheng, Brian Lucey.  
+What REALLY drives clean energy stocks - Fear or Fundamentals?
+Energy Economics, Volume 148, 2025, 108558.  
+[https://doi.org/10.1016/j.eneco.2025.108558](https://doi.org/10.1016/j.eneco.2025.108558)
+
+**BibTeX:**
+```bibtex
+@article{zheng2025fear,
+  title = {What REALLY drives clean energy stocks - Fear or Fundamentals?},
+  author = {Zheng, Yuqi and Lucey, Brian},
+  journal = {Energy Economics},
+  volume = {148},
+  pages = {108558},
+  year = {2025},
+  issn = {0140-9883},
+  doi = {10.1016/j.eneco.2025.108558},
+  url = {https://www.sciencedirect.com/science/article/pii/S0140988325003822}
+}
