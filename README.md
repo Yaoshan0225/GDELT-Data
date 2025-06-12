@@ -131,5 +131,3 @@ If you use this repository or build on our work, please cite the following paper
   doi = {10.1016/j.eneco.2025.108558},
   url = {https://www.sciencedirect.com/science/article/pii/S0140988325003822}
 }
-
-[def]: https://doi.org/10.1016/j.eneco.2025.108558
