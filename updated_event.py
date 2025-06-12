@@ -187,16 +187,16 @@ df = spark.read.csv("dbfs:/mnt/results/yuqi_test/event/gdeltevent_2_cutfile/", h
 
 # COMMAND ----------
 
-#筛选中国对美国的报道
+# Filter Chinese media reports about the United States
 from pyspark.sql import functions as F
 
 output_path = "dbfs:/mnt/results/yuqi_test/event/gdeltevent_3_filteredchnusa/"
 
-# 假设 df 已经运行
-# 使用 filter 来过滤数据
+# Assume df has already been defined
+# Use filter to subset the data
 filtered = df.filter((F.col('Actor_1_Country_CODE_7') == 'CHN') & (F.col('Actor2_Country_CODE_17') == 'USA'))
 
-# 将过滤后的 DataFrame 保存为 CSV 文件
+# Save the filtered DataFrame as a CSV file
 filtered.write.option("header", "true").csv(output_path, mode="overwrite")
 
 # COMMAND ----------
@@ -206,16 +206,16 @@ dffiltered = spark.read.csv("dbfs:/mnt/results/yuqi_test/event/gdeltevent_3_filt
 
 # COMMAND ----------
 
-#筛选美国对中国的报道
+# Filter U.S. reports on China
 from pyspark.sql import functions as F
 
 output_path = "dbfs:/mnt/results/yuqi_test/event/gdeltevent_4_filteredusachn/"
 
-# 假设 df 已经运行
-# 使用 filter 来过滤数据
+# Assume df has already been defined
+# Use filter to subset the data
 filtered = df.filter((F.col('Actor_1_Country_CODE_7') == 'USA') & (F.col('Actor2_Country_CODE_17') == 'CHN'))
 
-# 将过滤后的 DataFrame 保存为 CSV 文件
+# Save the filtered DataFrame as a CSV file
 filtered.write.option("header", "true").csv(output_path, mode="overwrite")
 
 # COMMAND ----------
@@ -229,21 +229,21 @@ from pyspark.sql import functions as F
 
 output_path_final = "dbfs:/mnt/results/yuqi_test/event/gdeltevent_5_goldsteinscale/"
 
-# 加载第一个 CSV 文件
+# Load the first CSV file
 df1 = spark.read.csv("dbfs:/mnt/results/yuqi_test/event/gdeltevent_3_filteredchnusa/", header=True, inferSchema=True)
-# 加载第二个 CSV 文件
+# Load the second CSV file
 df2 = spark.read.csv("dbfs:/mnt/results/yuqi_test/event/gdeltevent_4_filteredusachn/", header=True, inferSchema=True)
 
-# 合并两个 DataFrame
+# Merge two DataFrames
 df_combined = df1.union(df2)
 
-# 计算每天对应的 Goldstein_Scale_30 的平均值
+# Calculate the daily average of Goldstein_Scale_30
 result = df_combined.groupBy("Day").agg(F.avg("Goldstein_Scale_30").alias("average_goldstein_scale"))
 
-# 显示结果
+# Display the results
 result.show()
 
-# 保存合并后的结果
+# Save the merged results
 # result.write.option("header", "true").csv(output_path_final, mode="overwrite")
 
 # COMMAND ----------
